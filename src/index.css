@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,41 +14,34 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 351 100% 94%;
+    --primary-foreground: 355 78% 60%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 39 77% 95%;
+    --secondary-foreground: 40 60% 30%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 44 80% 80%;
+    --accent-foreground: 44 90% 25%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
+    --border: 20 30% 90%;
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +90,58 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-romance-parchment text-foreground bg-parchment-texture;
+    overflow-x: hidden;
+  }
+  
+  .filigree-border {
+    position: relative;
+  }
+  
+  .filigree-border::before,
+  .filigree-border::after {
+    content: '';
+    position: absolute;
+    background-size: 100% 100%;
+    width: 60px;
+    height: 60px;
+    opacity: 0.7;
+  }
+  
+  .filigree-border::before {
+    top: -10px;
+    left: -10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='%23D4AF37'%3E%3Cpath d='M95,50c0,24.85-20.15,45-45,45S5,74.85,5,50S25.15,5,50,5S95,25.15,95,50z M83.75,50c0-18.64-15.11-33.75-33.75-33.75S16.25,31.36,16.25,50S31.36,83.75,50,83.75S83.75,68.64,83.75,50z'/%3E%3Cpath d='M50,0C22.43,0,0,22.43,0,50s22.43,50,50,50s50-22.43,50-50S77.57,0,50,0z M50,95C25.15,95,5,74.85,5,50S25.15,5,50,5s45,20.15,45,45S74.85,95,50,95z'/%3E%3C/svg%3E");
+  }
+  
+  .filigree-border::after {
+    bottom: -10px;
+    right: -10px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='%23D4AF37'%3E%3Cpath d='M95,50c0,24.85-20.15,45-45,45S5,74.85,5,50S25.15,5,50,5S95,25.15,95,50z M83.75,50c0-18.64-15.11-33.75-33.75-33.75S16.25,31.36,16.25,50S31.36,83.75,50,83.75S83.75,68.64,83.75,50z'/%3E%3Cpath d='M50,0C22.43,0,0,22.43,0,50s22.43,50,50,50s50-22.43,50-50S77.57,0,50,0z M50,95C25.15,95,5,74.85,5,50S25.15,5,50,5s45,20.15,45,45S74.85,95,50,95z'/%3E%3C/svg%3E");
+  }
+  
+  .typewriter-text {
+    overflow: hidden;
+    white-space: nowrap;
+    opacity: 1;
+    animation: typewriter 4s steps(60, end) forwards;
+  }
+  
+  .candlelit-glow {
+    position: relative;
+  }
+  
+  .candlelit-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    box-shadow: 0 0 15px 5px rgba(255, 223, 170, 0.7);
+    opacity: 0;
+    animation: candle-glow 3s ease-in-out infinite;
+    z-index: -1;
   }
 }
