@@ -1,4 +1,3 @@
-
 import React from 'react';
 import ScrapbookTitle from '../components/ScrapbookTitle';
 import ScrapbookSection from '../components/ScrapbookSection';
@@ -41,7 +40,7 @@ const Index = () => {
         
         <ScrapbookSection title="Our First Conversation" delay={600} id="first-conversation">
           <TypewriterText 
-            text="After our first meeting, I couldn't stop thinking about you. Days passed, and finally, I found the courage to send you a message on Snapchat. Do you remember? Those initial messages, hesitant yet hopeful, each word carefully chosen."
+            text="After our first meeting, I couldn't stop thinking about you. Days passed, and finally, you send me message on snapchat. Do you remember? Those initial messages, hesitant yet hopeful, each word carefully chosen."
             delay={500}
             className="mb-4 text-romance-softBrown"
           />
